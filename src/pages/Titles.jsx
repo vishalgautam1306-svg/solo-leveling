@@ -1,12 +1,14 @@
-import { titles } from "../data/titles";
-
-function Titles() {
+function Titles({ titles }) {
   return (
     <div>
-      <h2>Owned Titles</h2>
+      <h2>Titles</h2>
 
       {titles.map((title, index) => (
-        <p key={index}>{title}</p>
+        <div key={index}>
+          <p>
+            {title.unlocked ? "👑" : "🔒"} {title.name}
+          </p>
+        </div>
       ))}
     </div>
   );

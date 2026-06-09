@@ -1,4 +1,4 @@
-export const inventory = {
+export const inventoryData = {
   streakShield: 0,
   questSkip: 0,
   timeCrystal: 0,

@@ -1,12 +1,16 @@
-function Achievements() {
+function Achievements({ achievements }) {
   return (
     <div>
       <h2>Achievements</h2>
 
-      <p>🔒 First Blood</p>
-      <p>🔒 7 Day Streak</p>
-      <p>🔒 100 Pushups</p>
-      <p>🔒 Knowledge Seeker</p>
+      {achievements.map((achievement, index) => (
+        <div key={index}>
+          <p>
+            {achievement.unlocked ? "🏆" : "🔒"}{" "}
+            {achievement.name}
+          </p>
+        </div>
+      ))}
     </div>
   );
 }

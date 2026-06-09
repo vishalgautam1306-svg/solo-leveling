@@ -1,7 +1,13 @@
-import { player } from "../data/player";
 import { progress } from "../data/progress";
 
-function Dashboard() {
+
+function Dashboard({
+  player,
+  streak,
+
+  // DAILY COMPLETION COUNTER
+  dailyCompleted,
+}) {
   return (
     <div>
       <h2>Dashboard</h2>
@@ -16,7 +22,16 @@ function Dashboard() {
 
       <hr />
 
-      <p>Current Streak: {progress.currentStreak}</p>
+      <p>🔥 Daily Streak: {streak} Days</p>
+          {/* DAILY QUEST PROGRESS */}
+      <p>
+  📋      Today's Progress:
+          {dailyCompleted} / 5
+      </p>
+      
+      <hr />
+
+      <p>🔥 Current Streak: {streak}</p>
 
       <p>Total Pushups: {progress.totalPushups}</p>
       <p>Total Squats: {progress.totalSquats}</p>
