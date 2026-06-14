@@ -1,4 +1,3 @@
-import { progress } from "../data/progress";
 
 
 function Dashboard({
@@ -33,8 +32,7 @@ function Dashboard({
 
       <p>🔥 Current Streak: {streak}</p>
 
-      <p>Total Pushups: {progress.totalPushups}</p>
-      <p>Total Squats: {progress.totalSquats}</p>
+
     </div>
   );
 }
